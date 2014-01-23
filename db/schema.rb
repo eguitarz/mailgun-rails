@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123141431) do
+ActiveRecord::Schema.define(version: 20140123142049) do
 
   create_table "letters", force: true do |t|
     t.datetime "created_at"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140123141431) do
     t.string   "from",        default: "",       null: false
     t.string   "to",          default: "",       null: false
     t.string   "body"
-    t.string   "campaing_id"
+    t.string   "campaign_id"
   end
 
 end
