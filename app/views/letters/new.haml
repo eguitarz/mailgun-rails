@@ -1,13 +1,18 @@
 Create letter
 
 = form_for @letter do |f|
-	= f.label :from
-	= f.text_field :from
-	= f.label :to
-	= f.text_field :to
-	= f.label :subject
-	= f.text_field :title
-	= f.label :campaign_id
-	= f.text_field :campaign_id
-	= f.label :body
-	= f.text_field :body
+	%p
+		= f.label :from
+		= f.text_field :from
+	%p
+		= f.label :to
+		= f.text_field :to
+	%p
+		= f.label :subject
+		= f.text_field :title
+	%p
+		= f.label :campaign_id
+		= f.text_field :campaign_id
+	%p
+		= f.label :body
+		= f.text_field :body
