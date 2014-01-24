@@ -1,0 +1,24 @@
+.span6.offset3
+	= form_for @letter do |f|
+		.row
+			= link_to :back, letters_path
+			= ' · '
+			= link_to :show, letter_path(@letter.id)
+		%hr
+		.row
+			= f.text_field :title, :placeholder => 'subject'
+		.row
+			= f.text_field :from, :placeholder => 'from'
+		.row
+			= f.text_field :to, :placeholder => 'to'
+		.row
+			= f.text_field :cc, :placeholder => 'cc'
+		.row
+			= f.text_field :bcc, :placeholder => 'bcc'
+		.row
+			= f.text_field :campaign_id, :placeholder => 'campaign_id'
+		%hr
+		.row
+			= f.text_area :body, :placeholder => 'body'
+		.row
+			= f.submit 'update', :class => 'btn'

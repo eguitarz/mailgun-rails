@@ -1,2 +1,15 @@
-Letter list
-= link_to 'create', new_letter_path
+.span7.offset3
+	%h2.row
+		Letter list
+	- @letters.each do |l|
+		.row
+			.span
+				= l.id
+			.span4
+				= link_to l.title, letter_path(l.id)
+			.span2
+				= link_to :destroy, letter_path(l.id), :method => :delete
+				= ' · '
+				= link_to :edit, edit_letter_path(l.id)
+	.row
+		= link_to 'create', new_letter_path

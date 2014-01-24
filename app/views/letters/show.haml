@@ -1,1 +1,54 @@
-Show Letter
+.span6.offset3.show_letter
+	.row
+		= link_to :back, letters_path
+		= ' · '
+		= link_to :edit, edit_letter_path(@letter.id)
+		= ' · '
+		= link_to :delete, letter_path(@letter.id), :method => :delete
+	%hr
+	%h2.row
+		= @letter.title
+	.row
+		from: 
+		= @letter.from
+	.row
+		to: 
+		- if !@letter.to or @letter.to.empty?
+			N/A
+		- else 
+			= @letter.to
+	.row
+		cc: 
+		- if !@letter.cc or @letter.cc.empty?
+			N/A
+		- else 
+			= @letter.cc
+	.row
+		bcc: 
+		- if !@letter.bcc or @letter.bcc.empty?
+			N/A
+		- else 
+			= @letter.bcc
+	.row
+		campaign id:
+		- if !@letter.campaign_id or @letter.campaign_id.empty?
+			N/A
+		- else 
+			= @letter.campaign_id 
+	%hr
+	.row
+		= @letter.body.html_safe
+	.row.send-form
+		.row
+		= form_tag @url do |f|
+			= hidden_field_tag 'from', @letter.from
+			= hidden_field_tag 'to', @letter.to
+			- if @letter.cc and !@letter.cc.empty?
+				= hidden_field_tag 'cc', @letter.cc
+			- if @letter.bcc and !@letter.bcc.empty?
+				= hidden_field_tag 'bcc', @letter.bcc
+			= hidden_field_tag 'subject', @letter.title
+			= hidden_field_tag 'html', @letter.body
+			- if @letter.campaign_id
+				= hidden_field_tag 'o:campaign', @letter.campaign_id
+			= submit_tag 'send', :class => 'btn'

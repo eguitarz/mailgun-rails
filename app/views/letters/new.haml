@@ -1,12 +1,20 @@
 .span4.offset4
 	= form_for @letter do |f|
+		%h2.row
+			Create mail
 		.row
 			= f.text_field :from, :placeholder => 'From'
 		.row
 			= f.text_field :to, :placeholder => 'To'
+		.row
+			= f.text_field :cc, :placeholder => 'cc'
+		.row
+			= f.text_field :bcc, :placeholder => 'bcc'
 		.row
 			= f.text_field :title, :placeholder => 'Subject'
 		.row
 			= f.text_field :campaign_id, :placeholder => 'Campaign ID'
 		.row
 			= f.text_area :body, :placeholder => 'Body'
+		.row
+			= f.submit 'create', :class => 'btn'
