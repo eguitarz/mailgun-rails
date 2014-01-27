@@ -15,6 +15,8 @@
 		.row
 			= f.text_field :campaign_id, :placeholder => 'Campaign ID'
 		.row
+			= f.button 'load template', :class => 'btn'
+		.row
 			= f.text_area :body, :placeholder => 'Body'
 		.row
 			= f.submit 'create', :class => 'btn'
