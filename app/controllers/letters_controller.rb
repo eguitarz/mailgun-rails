@@ -1,6 +1,6 @@
 class LettersController < ApplicationController
 	API_KEY = ENV['MAILGUN_KEY']
-	API_DOMAIN = ENV[MAILGUN_DOMAIN]
+	API_DOMAIN = ENV['MAILGUN_DOMAIN']
 	API_URL = "https://api:#{API_KEY}@api.mailgun.net/v2/#{API_DOMAIN}/messages"
 
 	def index
