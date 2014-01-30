@@ -43,9 +43,9 @@ class LettersController < ApplicationController
 		@letter = Letter.new(letter_params)
 		flash[:notice] = flash[:error] = ''
 		if @letter.save
-			flash[:notice] = 'created a mail'
+			flash.new[:notice] = 'created a mail'
 		else
-			flash[:error] = 'failed to create mails'
+			flash.new[:error] = 'failed to create mails'
 		end
 
 		redirect_to :letters
