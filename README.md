@@ -11,3 +11,4 @@ Features
 ----
 - support html
 - support templates
+- support mailgun
