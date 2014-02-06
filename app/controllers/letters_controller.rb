@@ -53,7 +53,9 @@ class LettersController < ApplicationController
 
 	def upload_template
 		puts params
-		redirect_to :back
+		respond_to do |format|
+			format.json { render :json => {:file => params[:files]} }
+		end
 	end
 
 	private

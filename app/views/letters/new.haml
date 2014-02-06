@@ -1,5 +1,5 @@
 .span4.offset4
-	%input{:id=>"fileupload", :type=>"file", :name=>"files[]", :"data-url"=>"letters/upload_template", :multiple => 'true', :class => 'hidden'}
+	%input{:id=>"fileupload", :type=>"file", :name=>"files[]", :"data-url"=>"/upload_template", :multiple => 'true', :class => 'hidden', :"data-remote" => true}
 	= form_for @letter do |f|
 		%h2.row
 			Create mail
