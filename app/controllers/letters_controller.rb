@@ -51,6 +51,11 @@ class LettersController < ApplicationController
 		redirect_to :letters
 	end
 
+	def upload_template
+		puts params
+		redirect_to :back
+	end
+
 	private
 	def letter_params
 		params.require(:letter).permit(:title, :from, :to, :cc, :bcc, :campaign_id, :body)
