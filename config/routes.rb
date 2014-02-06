@@ -1,5 +1,7 @@
 MailgunRails::Application.routes.draw do
-  resources :letters
+  resources :letters do
+    post 'upload_template' => 'letters#upload_template'
+  end
   root 'letters#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
