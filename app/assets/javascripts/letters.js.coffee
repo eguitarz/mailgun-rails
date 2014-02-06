@@ -2,10 +2,10 @@ $(document).on 'ready page:change', ()->
 	$('#fileupload').fileupload
 		dataType: 'json'
 		done: (e, data)->
-			$.each data.result.files, (index, file)->
+			$.each data.result.file, (index, file)->
 				console.log file
-				$('.filename').text file.name
-				$('<p/>').text(file.name).appendTo(document.body)
+				$('.filename').text file.original_filename
+				$('body').append file.tempfile
 
 	$('.open-file').click (e)->
 		$('#fileupload').click()
