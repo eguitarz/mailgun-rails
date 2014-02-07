@@ -5,7 +5,7 @@ $(document).on 'ready page:change', ()->
 			$.each data.result.file, (index, file)->
 				console.log file
 				$('.filename').text file.original_filename
-				$('body').append file.tempfile
+				$('mail-body').text file.tempfile
 
 	$('.open-file').click (e)->
 		$('#fileupload').click()

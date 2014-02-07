@@ -19,6 +19,6 @@
 			= f.button 'load template', :class => 'btn open-file', :type => 'button'
 			%span.filename
 		.row
-			= f.text_area :body, :placeholder => 'Body'
+			= f.text_area :body, :class => 'mail-body', :placeholder => 'Body'
 		.row
 			= f.submit 'create', :class => 'btn'
