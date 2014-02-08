@@ -1,7 +1,7 @@
 mailgun-rails
 =============
 
-A rails based website for mailgun users.
+A rails based website for mailgun users. You can edit your html mail via this web.
 
 Why?
 ----
