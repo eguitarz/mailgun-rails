@@ -52,7 +52,6 @@ class LettersController < ApplicationController
 	end
 
 	def upload_template
-		puts params
 		respond_to do |format|
 			format.json { render :json => {:file => params[:files]} }
 		end

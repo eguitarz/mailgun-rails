@@ -3,7 +3,6 @@ $(document).on 'ready page:change', ()->
 		dataType: 'json'
 		done: (e, data)->
 			$.each data.result.file, (index, file)->
-				console.log file
 				$('.filename').text file.original_filename
 				$('mail-body').text file.tempfile
 
