@@ -9,6 +9,6 @@ Mailgun did not provide interface to edit html, so I make one for this.
 
 Features
 ----
-- support html
+- support html mail preview
 - support templates
 - support mailgun
