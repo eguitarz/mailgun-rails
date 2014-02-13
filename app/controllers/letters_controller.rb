@@ -20,9 +20,9 @@ class LettersController < ApplicationController
 		@letter = Letter.find(params[:id])
 		flash[:notice] = flash[:error] = ''
 		if @letter.update(letter_params)
-			flash[:notice] = 'updated'
+			flash.new[:notice] = 'updated'
 		else
-			flash[:error] = 'failed to update'
+			flash.new[:error] = 'failed to update'
 		end
 
 		redirect_to letter_path(params[:id])
